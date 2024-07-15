@@ -1,0 +1,38 @@
+version: '3.1'
+services:
+  api-catalog:
+    image: adschosen/api-catalog:1.0.0
+    container_name: api-catalog
+    ports:
+      - 6070:6070
+    restart: always
+    links:
+      - api-catalog-db
+
+  api-catalog-db:
+    container_name: api-catalog-db
+    image: mysql:5.7
+    restart: always
+    environment:
+      MYSQL_DATABASE: 'flights_catalog'
+      MYSQL_ROOT_PASSWORD: 'muppet'
+    ports:
+      - 3310:3306
+
+  api-reservations:
+    image: adschosen/api-reservations-mongo:1.1.0
+    container_name: api-reservations
+    ports:
+      - 3070:3070
+    restart: always
+    links:
+      - api-reservation-db
+
+  api-reservation-db:
+    image: mongo:5
+    container_name: api-reservation-db
+    restart: always
+    environment:
+      MONGO_INITDB_DATABASE: reservations
+    ports:
+      - 5079:27017
