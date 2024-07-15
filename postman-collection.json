@@ -562,7 +562,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n   \"itineraryId\":\"35c0e8c3-ddf9-49be-ba91-bf7fda1e51cf\",\n   \"searchId\":\"TWA_g=2024-07-15T17:03:31.149626_f=BUE,MIA_t=MIA,BUE_d=2024-09-29,2024-10-03_a=1_c=1_i=1\",\n   \"passengers\":[\n      {\n         \"gender\":\"FEMALE\",\n         \"type\":\"ADULT\",\n         \"birth\":\"2002-03-01\",\n         \"nationality\":\"AR\",\n         \"firstName\":\"Andres\",\n         \"lastName\":\"Sacco\",\n         \"document\":{\n            \"number\":\"56\",\n            \"type\":\"PASSPORT\",\n            \"expiration\":\"2025-03-01\"\n         }\n      }\n   ],\n   \"contact\":{\n      \"telephone\":\"44444\",\n      \"email\":\"33344443@zdas.com\"\n   }\n}",
+							"raw": "{\n    \"itineraryId\": \"35c0e8c3-ddf9-49be-ba91-bf7fda1e51cf\",\n    \"searchId\": \"TWA_g=2024-07-15T17:03:31.149626_f=BUE,MIA_t=MIA,BUE_d=2024-09-29,2024-10-03_a=1_c=1_i=1\",\n    \"passengers\": [\n        {\n            \"gender\": \"FEMALE\",\n            \"type\": \"ADULT\",\n            \"birthday\": \"2002-03-01\",\n            \"nationality\": \"AR\",\n            \"firstName\": \"Andres\",\n            \"lastName\": \"Sacco\",\n            \"documentNumber\": \"56\",\n            \"documentType\": \"2025-03-01\"\n        }\n    ],\n    \"contact\": {\n        \"telephone\": \"44444\",\n        \"email\": \"33344443@zdas.com\"\n    }\n}",
 							"options": {
 								"raw": {
 									"language": "json"
