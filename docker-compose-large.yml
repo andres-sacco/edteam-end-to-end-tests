@@ -89,3 +89,12 @@ services:
       MONGO_INITDB_DATABASE: reservations
     ports:
       - 5079:27017
+
+  api-reservation-db-rest:
+    image: softinstigate/restheart:6.3.3
+    ports:
+      - 8082:8080
+    volumes:
+      - ./docker/restheart:/opt/restheart/etc
+    depends_on:
+      - api-reservation-db

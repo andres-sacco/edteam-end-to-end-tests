@@ -25,3 +25,11 @@ Feature: Reservation
     Then status 201
     And match response == reservation_response_ok
     And match header Content-Type == contentType
+
+    # Check the insert into the database
+    * def create_database = read('./database/create_reservation_database.json')
+
+    Given url restheartUrl + '/reservation/' + response.id
+    When method GET
+    Then status 200
+    And match response == create_database

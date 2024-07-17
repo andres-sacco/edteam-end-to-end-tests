@@ -1,0 +1,20 @@
+{
+  "_id": {
+    "$oid": #notnull
+  },
+  "passengers": [
+    {
+      "firstName": "Andres",
+      "lastName": "Sacco",
+      "documentNumber": "56",
+      "documentType": "2025-03-01",
+      "birthday": {
+        "$date": #number
+      },
+      "nationality": "AR"
+    }
+  ],
+  "itineraryId": #notnull,
+  "searchId": #notnull,
+  "_class": "com.edteam.reservations.model.Reservation"
+}
