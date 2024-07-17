@@ -3,10 +3,11 @@ Feature: Reservation
   Background:
     * url AppUrl
     * def contentType = 'application/json'
+
+  Scenario Outline: Get a reservation
     * def response_ok = read('./response/response-ok.json')
     * def response_error = read('./response/response-error.json')
 
-  Scenario Outline: Get a reservation
     Given path '/<id>'
     And header Content-Type = contentType
     When method GET

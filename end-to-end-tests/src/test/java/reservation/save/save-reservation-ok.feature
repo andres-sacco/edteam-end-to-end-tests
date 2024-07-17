@@ -2,11 +2,12 @@ Feature: Reservation
 
   Background:
     * url AppUrl
-    * def request_ok = read('./request/request-ok.json')
-    * def response_ok = read('./response/response-ok.json')
     * def contentType = 'application/json'
 
   Scenario: Save a reservation
+    * def request_ok = read('./request/request-ok.json')
+    * def response_ok = read('./response/response-ok.json')
+
     Given path '/'
     And request request_ok
     And header Content-Type = contentType
