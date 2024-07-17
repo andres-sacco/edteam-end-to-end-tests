@@ -1,14 +1,13 @@
 Feature: Reservation
 
   Background:
-    * url AppUrl
     * def contentType = 'application/json'
 
   Scenario Outline: Get a reservation
     * def response_ok = read('./response/response-ok.json')
     * def response_error = read('./response/response-error.json')
 
-    Given path '/<id>'
+    Given url reservationUrl + '/<id>'
     And header Content-Type = contentType
     When method GET
     Then status <responseStatus>
@@ -17,8 +16,8 @@ Feature: Reservation
 
     Examples:
       | id                           | responseStatus  |  responseBody |
-      | 66956a66ed883a3726fe04fa     | 200             |  response_ok  |
-      | 66956a66ed883a3726fe04f9     | 200             |  response_ok  |
-      | 66956a5ced883a3726fe04f8     | 200             |  response_ok  |
+      | 6697e91a712b2d4d94fd2269     | 200             |  response_ok  |
+      | 6697e91c712b2d4d94fd226b     | 200             |  response_ok  |
+      | 6697e91c712b2d4d94fd226c     | 200             |  response_ok  |
       | 66956a5ced883a3726fe04e0     | 404             |  response_error |
 

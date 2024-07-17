@@ -6,12 +6,15 @@ function fn() {
   }
   const config = {
     env: env,
-    AppUrl: '/api/flights/reservation' //The URL of the API
+    reservationUrl: '/api/flights/reservation', //The URL of the API
+    clustersUrl: '/api/flights/clusters' //The URL of the API
   };
   if (env === 'dev') {
-    config.AppUrl = 'http://127.0.0.1:3070' + config.AppUrl //The entire URL with the host
+    config.reservationUrl = 'http://127.0.0.1:3070' + config.reservationUrl //The entire URL with the host
+    config.clustersUrl = 'http://127.0.0.1:4070' + config.clustersUrl //The entire URL with the host
   } else if (env === 'e2e') {
-    config.AppUrl = 'http://127.0.0.1:3070' + config.AppUrl
+    config.reservationUrl = 'http://127.0.0.1:3070' + config.reservationUrl
+    config.clustersUrl = 'http://127.0.0.1:4070' + config.clustersUrl //The entire URL with the host
   }
   return config;
 }

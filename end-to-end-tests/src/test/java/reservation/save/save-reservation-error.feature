@@ -1,14 +1,13 @@
 Feature: Reservation
 
   Background:
-    * url AppUrl
     * def contentType = 'application/json'
 
   Scenario: Save reservation with errors
     * def request_error = read('./request/request-error.json')
     * def response_error = read('./response/response-error.json')
 
-    Given path '/'
+    Given url reservationUrl + '/'
     And request request_error
     And header Content-Type = contentType
     When method POST

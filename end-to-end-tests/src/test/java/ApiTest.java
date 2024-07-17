@@ -8,16 +8,16 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class ApiTest {
 
-    /*@Karate.Test
+    @Karate.Test
     Karate runAllTests() {
         return Karate.run().tags("~@ignore").relativeTo(getClass());
-    }*/
+    }
 
 
-    @Test
+    /*@Test
     void testParallel() {
         Results results = Runner.path("classpath:reservation/")
                 .parallel(12); // Number of threads
         assertEquals(0, results.getFailCount(), results.getErrorMessages());
-    }
+    }*/
 }
