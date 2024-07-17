@@ -14,11 +14,11 @@ Feature: Reservation
 
     # Save the reservation
     * def request_ok = read('./request/request-ok.json')
-    * request_ok.searchId = response.searchId
+    * request_ok.searchId = response.id
     * request_ok.itineraryId = response.itineraries[0].id
     * def reservation_response_ok = read('./response/reservation-response-ok.json')
 
-    Given reservationUrl + '/'
+    Given url reservationUrl + '/'
     And request request_ok
     And header Content-Type = contentType
     When method POST
