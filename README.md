@@ -84,7 +84,7 @@ El flujo de cada solicitud de búsqueda tiene los siguientes pasos:
 7. Los **API-Clusters** guardan las respuestas completas durante un breve período en la base de datos de Redis porque la búsqueda está paginada, por lo que los **API-Clusters** usan la base de datos para evitar volver a realizar la misma búsqueda solo para obtener la siguiente. página el resultado. 
 
 La siguiente imagen ilustra el flujo descrito anteriormente.
-[Flujo](.images/Search-API-Flow.png)
+![Flujo](.images/Search-API-Flow.png)
 
 Además, puedes ver el flujo con más detalle en esta imagen:
 ![Detalle del flujo](.images/Search-Diagram-Flow.png)
