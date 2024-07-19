@@ -19,5 +19,10 @@ function fn() {
     config.clustersUrl = 'http://127.0.0.1:4070' + config.clustersUrl //The entire URL with the host
     config.restheartUrl = 'http://127.0.0.1:8082' + config.restheartUrl //The entire URL with the host
   }
+
+  // Enable pretty printing for requests and responses
+  karate.configure('logPrettyRequest', true);
+  karate.configure('logPrettyResponse', true);
+
   return config;
 }
