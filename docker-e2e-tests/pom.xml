@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
  
     <groupId>com.twa</groupId>
-    <artifactId>end-to-end-tests</artifactId>
+    <artifactId>docker-e2e-tests</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
  
@@ -14,10 +14,6 @@
         <maven.surefire.version>3.0.0</maven.surefire.version>
         <karate.version>1.4.1</karate.version>
         <playwright.version>1.28.1</playwright.version>
-
-        <scala.version>3.4.2</scala.version>
-        <gatling.plugin.version>4.9.6</gatling.plugin.version>
-        <scala-maven-plugin.version>4.9.2</scala-maven-plugin.version>
     </properties>    
 
     <dependencies>         
@@ -25,20 +21,6 @@
             <groupId>com.intuit.karate</groupId>
             <artifactId>karate-junit5</artifactId>
             <version>${karate.version}</version>
-            <scope>test</scope>
-        </dependency>
-
-        <dependency>
-            <groupId>com.intuit.karate</groupId>
-            <artifactId>karate-gatling</artifactId>
-            <version>${karate.version}</version>
-            <scope>test</scope>
-        </dependency>
-
-        <dependency>
-            <groupId>org.scala-lang</groupId>
-            <artifactId>scala3-library_3</artifactId>
-            <version>${scala.version}</version>
             <scope>test</scope>
         </dependency>
 
@@ -82,45 +64,7 @@
                     </includes>
                 </configuration>
             </plugin>
-            <plugin>
-                <groupId>net.alchim31.maven</groupId>
-                <artifactId>scala-maven-plugin</artifactId>
-                <version>${scala-maven-plugin.version}</version>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>testCompile</goal>
-                        </goals>
-                        <configuration>
-                            <args>
-                                <arg>-Jbackend:GenBCode</arg>
-                                <arg>-Jdelambdafy:method</arg>
-                                <arg>-deprecation</arg>
-                                <arg>-feature</arg>
-                                <arg>-unchecked</arg>
-                                <arg>-language:implicitConversions</arg>
-                                <arg>-language:postfixOps</arg>
-                            </args>
-                        </configuration>
-                    </execution>
-                </executions>
-            </plugin>
-            <plugin>
-                <groupId>io.gatling</groupId>
-                <artifactId>gatling-maven-plugin</artifactId>
-                <version>${gatling.plugin.version}</version>
-                <configuration>
-                    <simulationsFolder>src/test/java</simulationsFolder>
-                </configuration>
-                <executions>
-                    <execution>
-                        <phase>test</phase>
-                        <goals>
-                            <goal>test</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
-        </plugins>
-    </build>
+        </plugins>        
+    </build>       
+    
 </project>
