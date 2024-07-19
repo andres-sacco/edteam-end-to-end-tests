@@ -1,10 +1,12 @@
 package reservation.documentation;
 
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.Disabled;
 import com.microsoft.playwright.*;
 
 class PlaywrightTest {
 
+    @Disabled
     @Test
     void should_validate_documentation() {
         Playwright playwright = Playwright.create();

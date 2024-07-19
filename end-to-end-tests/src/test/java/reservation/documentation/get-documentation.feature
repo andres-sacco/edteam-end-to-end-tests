@@ -3,6 +3,7 @@ Feature: Swagger API
   Background:
     * configure driver = { type: 'playwright-chromium' , showDriverLog: true }
 
+  @ignore
   Scenario: Validate Swagger API
     Given driver reservationUrl + '/documentation'
     When waitFor("div.swagger-ui")

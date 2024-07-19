@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
  
     <groupId>com.twa</groupId>
-    <artifactId>end-to-end-tests</artifactId>
+    <artifactId>docker-e2e-tests</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
  
