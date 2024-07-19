@@ -15,9 +15,9 @@ function fn() {
     config.clustersUrl = 'http://localhost:4070' + config.clustersUrl //The entire URL with the host
     config.restheartUrl = 'http://localhost:8082' + config.restheartUrl //The entire URL with the host
   } else if (env === 'e2e') {
-    config.reservationUrl = 'http://127.0.0.1:3070' + config.reservationUrl
-    config.clustersUrl = 'http://127.0.0.1:4070' + config.clustersUrl //The entire URL with the host
-    config.restheartUrl = 'http://127.0.0.1:8082' + config.restheartUrl //The entire URL with the host
+    config.reservationUrl = 'http://localhost:3070' + config.reservationUrl
+    config.clustersUrl = 'http://localhost:4070' + config.clustersUrl //The entire URL with the host
+    config.restheartUrl = 'http://localhost:8082' + config.restheartUrl //The entire URL with the host
   }
 
   // Enable pretty printing for requests and responses
